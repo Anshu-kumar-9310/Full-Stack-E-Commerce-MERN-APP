@@ -76,6 +76,18 @@ const SummaryApi = {
     filterProduct : {
         url : `${backendDomin}/api/filter-product`,
         method : 'post'
+    },
+    payment : {
+        url : `${backendDomin}/api/payment`,
+        method : 'post'
+    },
+    myOrders : {
+        url : `${backendDomin}/api/myOrders`,
+        method : 'get'
+    },
+    AdminAllOrders : {
+        url : `${backendDomin}/api/AdminAllOrders`,
+        method : 'get'
     }
 }
 

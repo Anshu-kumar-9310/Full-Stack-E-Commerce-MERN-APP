@@ -22,6 +22,10 @@ const updateAddToCartProduct = require('../controller/user/updateAddToCartProduc
 const deleteAddToCartProduct = require('../controller/user/deleteAddToCartProduct')
 const searchProduct = require('../controller/product/searchProduct')
 const filterProductController = require('../controller/product/filterProduct')
+const paymentController = require('../controller/order/paymentController')
+const webhook = require('../controller/order/webhook')
+const myOrder = require('../controller/order/MyOrders')
+const AdminAllOrders = require('../controller/order/AdminAllOrders')
 
 
 
@@ -51,9 +55,15 @@ router.get("/view-card-product",authToken,addToCartViewProduct)
 router.post("/update-cart-product",authToken,updateAddToCartProduct)
 router.post("/delete-cart-product",authToken,deleteAddToCartProduct)
 
+//payment
+router.post('/payment',authToken,paymentController)
+router.post('/webhook',webhook) // localhost:8080/api/webhook this api is hit by stripe
 
+// myOrders
+router.get('/myOrders',authToken,myOrder)
 
-
+// AdminAllOrdersList
+router.get('/AdminAllOrders',authToken,AdminAllOrders)
 
 
 
