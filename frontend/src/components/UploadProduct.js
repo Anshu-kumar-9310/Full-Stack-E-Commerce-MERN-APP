@@ -95,7 +95,7 @@ const UploadProduct = ({
 
   return (
     <div className='fixed w-full  h-full bg-slate-200 bg-opacity-35 top-0 left-0 right-0 bottom-0 flex justify-center items-center'>
-       <div className='bg-white p-4 rounded w-full max-w-2xl h-full max-h-[80%] overflow-hidden'>
+       <div className='bg-white p-4 rounded w-full max-w-2xl h-full max-h-[80%] overflow-hidden scrollbar-none'>
 
             <div className='flex justify-between items-center pb-3'>
                 <h2 className='font-bold text-lg'>Upload Product</h2>
@@ -104,7 +104,7 @@ const UploadProduct = ({
                 </div>
             </div>
 
-          <form className='grid p-4 gap-2 overflow-y-scroll h-full pb-5' onSubmit={handleSubmit}>
+          <form className='grid p-4 gap-2 overflow-y-scroll h-full pb-5 scrollbar-none' onSubmit={handleSubmit}>
             <label htmlFor='productName'>Product Name :</label>
             <input 
               type='text' 
