@@ -14,6 +14,8 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
+// API routes
+app.get('/',(req, res) => res.send("API Working"))
 app.use("/api",router)
 
 const PORT = 8080 || process.env.PORT
