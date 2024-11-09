@@ -2,7 +2,7 @@ import React from 'react'
 
 const ForgotPassowrd = () => {
   return (
-    <div>ForgotPassowrd</div>
+    <div className='min-h-[80vh]'>ForgotPassowrd</div>
   )
 }
 

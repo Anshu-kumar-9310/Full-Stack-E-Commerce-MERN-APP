@@ -58,13 +58,13 @@ const Login = () => {
     // console.log("data login",data)
     
   return (
-    <section id='login'>
-        <div className='mx-auto container p-4'>
+    <section id='login' className='min-h-[80vh]'>
+        <div className='mx-auto container p-4 border-md' >
 
-            <div className='bg-white p-5 w-full max-w-sm mx-auto'>
-                    <div className='w-20 h-20 mx-auto'>
+            <div className='bg-white p-5 w-full max-w-sm mx-auto mt-5'>
+                    {/* <div className='w-20 h-20 mx-auto'>
                         <img src={loginIcons} alt='login icons'/>
-                    </div>
+                    </div> */}
 
                     <form className='pt-6 flex flex-col gap-2' onSubmit={handleSubmit}>
                         <div className='grid'>

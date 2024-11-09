@@ -105,13 +105,13 @@ const CategoryProduct = () => {
 
                     <form className='text-sm flex flex-col gap-2 py-2'>
                         <div className='flex items-center gap-3'>
-                          <input type='radio' name='sortBy' checked={sortBy === 'asc'} onChange={handleOnChangeSortBy} value={"asc"}/>
-                          <label>Price - Low to High</label>
+                          <input type='radio' name='sortBy' checked={sortBy === 'asc'} onChange={handleOnChangeSortBy} value={"asc"} id='sortLowToHigh'/>
+                          <label className='cursor-pointer' htmlFor='sortLowToHigh'>Price - Low to High</label>
                         </div>
 
                         <div className='flex items-center gap-3'>
-                          <input type='radio' name='sortBy' checked={sortBy === 'dsc'} onChange={handleOnChangeSortBy} value={"dsc"}/>
-                          <label>Price - High to Low</label>
+                          <input type='radio' name='sortBy' checked={sortBy === 'dsc'} onChange={handleOnChangeSortBy} value={"dsc"} id='sortHighToLow'/>
+                          <label className='cursor-pointer' htmlFor='sortHighToLow'>Price - High to Low</label>
                         </div>
                     </form>
                 </div>
@@ -125,9 +125,9 @@ const CategoryProduct = () => {
                         {
                           productCategory.map((categoryName,index)=>{
                             return(
-                              <div className='flex items-center gap-3'>
+                              <div className='flex items-center gap-3'key={categoryName+index}> 
                                  <input type='checkbox' name={"category"} checked={selectCategory[categoryName?.value]} value={categoryName?.value} id={categoryName?.value} onChange={handleSelectCategory} />
-                                 <label htmlFor={categoryName?.value}>{categoryName?.label}</label>
+                                 <label htmlFor={categoryName?.value} className='cursor-pointer'>{categoryName?.label}</label>
                               </div>
                             )
                           })

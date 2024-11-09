@@ -1,5 +1,9 @@
+
 .customShadow{
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
 }
 
 /***user table***/

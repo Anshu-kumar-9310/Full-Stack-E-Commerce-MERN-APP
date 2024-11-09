@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { MdModeEditOutline } from "react-icons/md";
 import AdminEditProduct from './AdminEditProduct';
 import displayINRCurrency from '../helpers/displayCurrency';
+import { Link } from 'react-router-dom';
 
 const AdminProductCard = ({
     data,
@@ -12,14 +13,14 @@ const AdminProductCard = ({
   return (
     <div className='bg-white p-4 rounded '>
        <div className='w-40'>
-            <div className='w-32 h-32 flex justify-center items-center'>
-              <img src={data?.productImage[0]}  className='mx-auto object-fill h-full'/>   
-            </div> 
+            <Link to={"/product/"+data?._id} className='w-32 h-32 flex justify-center items-center cursor-pointer'>
+              <img src={data?.productImage[0]}  className='mx-auto object-scale-down h-full'/>   
+            </Link> 
             <h1 className='text-ellipsis line-clamp-2'>{data.productName}</h1>
 
             <div>
 
-                <p className='font-semibold'>
+                <p className='font-semibold text-red-600 text-lg'>
                   {
                     displayINRCurrency(data.sellingPrice)
                   }

@@ -24,10 +24,10 @@ const SearchProduct = () => {
     },[query])
 
   return (
-    <div className='container mx-auto p-4'>
+    <div className='container mx-auto p-4 scrollbar-none min-h-[80vh]'>
       {
         loading && (
-          <p className='text-lg text-center'>Loading ...</p>
+          <p className='bg-white text-lg text-center p-4' >Loading ...</p>
         )
       }
  
@@ -42,7 +42,7 @@ const SearchProduct = () => {
 
       {
         data.length !==0 && !loading && (
-          <VerticalCard loading={ loading} data={data}/>
+          <VerticalCard loading={ loading} data={data} className="scrollbar-none"/>
         )
       }
 

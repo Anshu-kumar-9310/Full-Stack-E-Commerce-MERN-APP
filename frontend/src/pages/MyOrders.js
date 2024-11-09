@@ -29,7 +29,7 @@ const MyOrders = () => {
   }, []);
 
   return (
-    <div className="container mx-auto py-6 px-4 sm:px-8 ">
+    <div className="container mx-auto py-6 px-4 sm:px-8 min-h-[80vh]">
       <h2 className="text-2xl font-semibold text-center mb-6">Your Orders</h2>
       {data.length === 0 && (
         <div className="text-center text-lg my-3 bg-white p-6 rounded-lg shadow-md">
@@ -72,7 +72,7 @@ const MyOrders = () => {
                   <img
                     src={product.image[0]}
                     alt={product.name}
-                    className="w-24 h-24 object-cover rounded-md border mix-blend-multiply"
+                    className="w-24 h-24 object-scale-down rounded-md border mix-blend-multiply"
                   />
                   <div className="flex-1">
                     <p className="text-lg font-medium text-gray-800 line-clamp-1">

@@ -4,6 +4,7 @@ import Context from '../context'
 import displayINRCurrency from '../helpers/displayCurrency'
 import { MdDelete } from "react-icons/md";
 import {loadStripe} from '@stripe/stripe-js'
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const [data,setData] = useState([])
@@ -139,12 +140,12 @@ const Cart = () => {
         }
     }
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto scrollbar-none min-h-[80vh]'>
         
-        <div className='text-center text-lg my-3'>
+        <div className='text-center text-lg my-3 px-4'>
             {
                 data.length === 0 && !loading && (
-                    <p className='bg-white py-5'>No Data</p>
+                    <p className='bg-white py-5 capitalize'>You have not placed a order yet</p>
                 )
             }
         </div>
@@ -164,10 +165,10 @@ const Cart = () => {
                         ) : (
                           data.map((product,index)=>{
                            return(
-                            <div key={product?._id+"Add To Cart Loading"} className='w-full bg-white h-32 my-2 border border-slate-300  rounded grid grid-cols-[128px,1fr]'>
-                                <div className='w-32 h-32 bg-slate-200'>
+                            <div key={product?._id+"Add To Cart Loading"} className='w-full bg-white h-32 my-2 border border-slate-300  rounded grid grid-cols-[128px,1fr] '>
+                                <Link to={"/product/"+product?.productId?._id} className='w-32 h-32 bg-slate-200 cursor-pointer'>
                                     <img src={product?.productId?.productImage[0]} className='w-full h-full object-scale-down mix-blend-multiply' />
-                                </div>
+                                </Link>
                                 <div className='px-4 py-2 relative'>
                                     {/**delete product */}
                                     <div className='absolute right-0 text-red-600 rounded-full p-2 hover:bg-red-600 hover:text-white cursor-pointer' onClick={()=>deleteCartProduct(product?._id)}>
