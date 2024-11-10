@@ -72,7 +72,7 @@ const AdminAllOrders = () => {
                   <img
                     src={product.image[0]}
                     alt={product.name}
-                    className="w-24 h-24 object-cover rounded-md border mix-blend-multiply"
+                     className="w-24 h-24 object-scale-down rounded-md border mix-blend-multiply"
                   />
                   <div className="flex-1">
                     <p className="text-lg font-medium text-gray-800 line-clamp-1">

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Logo from './Logo'
 import { GrSearch } from "react-icons/gr";
 import { FaRegCircleUser } from "react-icons/fa6";
@@ -34,6 +34,8 @@ const Header = () => {
       toast.success(data.message)
       dispatch(setUserDetails(null))
       navigate("/")
+      // close when logout
+      setMenuDisplay(false)
     }
 
     if(data.error){
@@ -41,6 +43,7 @@ const Header = () => {
     }
 
   }
+
 
   const handleSearch = (e)=>{
     const { value } = e.target
@@ -52,6 +55,7 @@ const Header = () => {
       navigate("/search")
     }
   }
+
   return (
     <header className='h-16 shadow-md bg-white fixed w-full z-40'>
       <div className=' h-full container mx-auto flex items-center px-8 justify-between'>
