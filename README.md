@@ -1,4 +1,4 @@
-backend/.env
+backend/.env -->
 MONGODB_URI = 
 TOKEN_SECRET_KEY = 
 FRONTEND_URL = 
@@ -7,7 +7,7 @@ STRIPE_SHIPPING_RATES =
 STRIPE_CURRENCY = 'INR'
 STRIPE_ENDPOINT_WEBHOOK_SECRET_KEY = 
 
-frontend/.env 
+frontend/.env -->
 REACT_APP_CLOUD_NAME_CLOUDINARY = (make a cloudinary account then use your cloudinary id)
 REACT_APP_STRIPE_PUBLIC_KEY = 
 REACT_APP_BACKEND_URL=
