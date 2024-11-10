@@ -8,6 +8,7 @@ import VerticalCardProduct from '../components/VerticalCardProduct';
 import CategroyWiseProductDisplay from '../components/CategoryWiseProductDisplay';
 import addToCart from '../helpers/addToCart';
 import Context from '../context';
+import HorizontalCardProduct from '../components/HorizontalCardProduct';
 
 const ProductDetails = () => {
   const [data,setData] = useState({
@@ -222,7 +223,12 @@ const ProductDetails = () => {
 
       {
         data?.category && (
+          <>
+          <HorizontalCardProduct category={data?.category} heading={'Customers also viewed these products'}/>
           <CategroyWiseProductDisplay category={data?.category} heading={"Recommended Product"}/>
+          <VerticalCardProduct category={data?.category} heading={"Brand in this category on Cara"}/>
+
+          </>
         )
       }
      

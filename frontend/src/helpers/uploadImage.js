@@ -3,6 +3,7 @@ const url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME_
 const uploadImage  = async(image) => {
     const formData = new FormData()
     formData.append("file",image)
+    // your folder name which is created in cloudinary website in the place of mern-ecommerce 
     formData.append("upload_preset","mern-ecommerce")
     
 
