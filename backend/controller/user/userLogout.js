@@ -8,7 +8,7 @@ async function userLogout(req, res) {
         };
         res.clearCookie("token", tokenOption);
         
-        // res.set('Cache-Control', 'no-store'); // Prevent caching issues
+        res.set('Cache-Control', 'no-store'); // Prevent caching issues
         res.json({
             message: "Logged out successfully",
             error: false,
@@ -23,3 +23,5 @@ async function userLogout(req, res) {
         });
     }
 }
+
+module.exports = userLogout; 
