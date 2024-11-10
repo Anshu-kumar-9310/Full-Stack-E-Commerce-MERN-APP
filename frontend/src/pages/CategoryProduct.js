@@ -96,9 +96,9 @@ const CategoryProduct = () => {
     <div className='container mx-auto p-4'>
 
        {/***desktop version */}
-       <div className='hidden lg:grid grid-cols-[200px,1fr]'>
+       <div className='hidden lg:grid grid-cols-[200px,1fr] scrollbar-none'>
            {/***left side */}
-           <div className='bg-white p-2 min-h-[calc(100vh-120px)] overflow-y-scroll'>
+           <div className='bg-white p-2 min-h-[calc(100vh-120px)] overflow-y-scroll scrollbar-none'>
                 {/**sort by */}
                 <div className=''>
                     <h3 className='text-base uppercase font-medium text-slate-500 border-b pb-1 border-slate-300'>Sort by</h3>
@@ -140,10 +140,10 @@ const CategoryProduct = () => {
 
 
             {/***right side ( product ) */}
-            <div className='px-4'>
+            <div className='px-4 scrollbar-none'>
               <p className='font-medium text-slate-800 text-lg my-2'>Search Results : {data.length}</p>
 
-             <div className='min-h-[calc(100vh-120px)] overflow-y-scroll max-h-[calc(100vh-120px)]'>
+             <div className='min-h-[calc(100vh-120px)] overflow-y-scroll max-h-[calc(100vh-120px)] scrollbar-none'>
               {
                   data.length !== 0 && !loading && (
                     <VerticalCard data={data} loading={loading}/>
@@ -152,6 +152,20 @@ const CategoryProduct = () => {
              </div>
             </div>
        </div>
+
+       {/* mobile version */}
+        {/***right side ( product ) */}
+        <div className='px-4 lg:hidden scrollbar-none'>
+              <p className='font-medium text-slate-800 text-lg my-2'>Search Results : {data.length}</p>
+
+             <div className='min-h-[calc(100vh-120px)] overflow-y-scroll max-h-[calc(100vh-120px)] scrollbar-none'>
+              {
+                  data.length !== 0 && !loading && (
+                    <VerticalCard data={data} loading={loading}/>
+                  )
+              }
+             </div>
+        </div>
        
     </div>
   )

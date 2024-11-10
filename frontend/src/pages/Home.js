@@ -3,7 +3,7 @@ import CategoryList from '../components/CategoryList'
 import BannerProduct from '../components/BannerProduct'
 import HorizontalCardProduct from '../components/HorizontalCardProduct'
 import VerticalCardProduct from '../components/VerticalCardProduct'
-import CategroyWiseProductDisplay from '../components/CategoryWiseProductDisplay'
+import VerticalProductWithoutScrollbar from '../components/VerticalProductWithoutScrollbar'
 
 
 const Home = () => {
@@ -17,16 +17,16 @@ const Home = () => {
       <HorizontalCardProduct category={"watches"} heading={"Popular's Watches"}/>
 
       {/*  */}
-      <CategroyWiseProductDisplay category={"airpodes"} heading={"Top's Airpodes"}/>
-      <CategroyWiseProductDisplay category={"camera"} heading={"Camera & Photography"}/>
-      <CategroyWiseProductDisplay category={"Mouse"} heading={"Mouse"}/>
-      <CategroyWiseProductDisplay category={"earphones"} heading={"Wired Earphones And HeadPhones"}/>
-      <CategroyWiseProductDisplay category={"refrigerator"} heading={" Heavy Discount"}/>
-      <CategroyWiseProductDisplay category={"watches"} heading={"Popular's Watches"}/>
-      <CategroyWiseProductDisplay category={"mobiles"} heading={"Speacial Offer"}/>
-      <CategroyWiseProductDisplay category={"televisions"} heading={"Diwali Offers"}/>
-      <CategroyWiseProductDisplay category={"speakers"} heading={"Barnded Bluetooth Speakers"}/>
-      <CategroyWiseProductDisplay category={"trimmers"} heading={"Latest Trimmers"}/>
+      <VerticalProductWithoutScrollbar category={"airpodes"} heading={"Top's Airpodes"}/>
+      <VerticalProductWithoutScrollbar category={"camera"} heading={"Camera & Photography"}/>
+      <VerticalProductWithoutScrollbar category={"Mouse"} heading={"Mouse"}/>
+      <VerticalProductWithoutScrollbar category={"earphones"} heading={"Wired Earphones And HeadPhones"}/>
+      <VerticalProductWithoutScrollbar category={"refrigerator"} heading={" Heavy Discount"}/>
+      <VerticalProductWithoutScrollbar category={"watches"} heading={"Popular's Watches"}/>
+      <VerticalProductWithoutScrollbar category={"mobiles"} heading={"Speacial Offer"}/>
+      <VerticalProductWithoutScrollbar category={"televisions"} heading={"Diwali Offers"}/>
+      <VerticalProductWithoutScrollbar category={"speakers"} heading={"Barnded Bluetooth Speakers"}/>
+      <VerticalProductWithoutScrollbar category={"trimmers"} heading={"Latest Trimmers"}/>
 
       {/*  */}
       <VerticalCardProduct category={"airpodes"} heading={"Top's Airpodes"}/>
